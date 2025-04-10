@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import UserRoute from "./routes/UserRoute.js";
+import UserRoute from "./route/UserRoute.js";
 
 const app = express();
 app.set("view engine", "ejs");
