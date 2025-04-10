@@ -19,7 +19,7 @@ app.use(notesRoutes);
         await db.sync(); // Memastikan tabel dibuat jika belum ada
         console.log("Database Connected!");
 
-        const PORT = process.env.PORT || 5000;
+        const PORT = process.env.PORT || 8080;
         app.listen(PORT, () => {
             console.log(`Server running at http://localhost:${PORT}`);
         });
