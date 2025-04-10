@@ -3,7 +3,6 @@ import cors from "cors";
 import UserRoute from "./route/NotesRoute.js";
 
 const app = express();
-app.set("view engine", "ejs");
 
 app.use(cors());
 app.use(express.json());
