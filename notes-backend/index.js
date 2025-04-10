@@ -4,7 +4,6 @@ import notesRoutes from "./route/NotesRoute.js";
 import cors from "cors";
 
 const app = express(); // Pastikan app dideklarasikan sebelum digunakan
-const PORT = 5000;
 
 // Middleware
 app.use(cors());
@@ -20,8 +19,8 @@ app.use(notesRoutes);
         await db.sync(); // Memastikan tabel dibuat jika belum ada
         console.log("Database Connected!");
 
-        app.listen(PORT, () => {
-            console.log(`Server running at http://localhost:${PORT}`);
+        app.listen(5000, () => {
+            console.log(`Server running at http://localhost:${5000}`);
         });
     } catch (error) {
         console.error("Connection error:", error);
