@@ -1,0 +1,27 @@
+GET http://localhost:5001/notes
+Accept: application/json
+
+### id
+GET http://localhost:5001/notes/1
+Accept: application/json
+
+### buat baru
+POST http://localhost:5001/notes
+Content-Type: application/json
+
+{
+    "name": "qurana",
+    "title": "minggu",
+    "content": "hari ini aku puasaa."
+}
+
+### update
+PUT http://localhost:5001/notes/1
+Content-Type: application/json
+
+{
+    "name": "akapp"
+}
+
+### delete
+DELETE http://localhost:5001/notes/1
