@@ -11,7 +11,7 @@ steps:
       [
         "run",
         "deploy",
-        "be-rafif",
+        "be-akap",
         "--image",
         "gcr.io/$PROJECT_ID/be-akap",
         "--timeout",
