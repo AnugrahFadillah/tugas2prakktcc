@@ -1,30 +1,13 @@
 import express from "express";
-import db from "./config/database.js";
-import notesRoutes from "./route/NotesRoute.js";
 import cors from "cors";
+import UserRoute from "./routes/UserRoute.js";
 
-const app = express(); // Pastikan app dideklarasikan sebelum digunakan
+const app = express();
+app.set("view engine", "ejs");
 
-// Middleware
 app.use(cors());
 app.use(express.json());
+app.get("/", (req, res) => res.render("index"));
+app.use(UserRoute);
 
-// Routes
-app.use(notesRoutes);
-
-// Test database connection and start server
-(async () => {
-    try {
-        await db.authenticate();
-        await db.sync(); // Memastikan tabel dibuat jika belum ada
-        console.log("Database Connected!");
-
-        const PORT = process.env.PORT || 8080;
-        app.listen(PORT, () => {
-            console.log(`Server running at http://localhost:${PORT}`);
-        });
-
-    } catch (error) {
-        console.error("Connection error:", error);
-    }
-})();
+app.listen(5000, () => console.log("Server connected"));
