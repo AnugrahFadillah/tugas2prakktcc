@@ -10,4 +10,6 @@ app.use(express.json());
 app.get("/", (req, res) => res.render("index"));
 app.use(UserRoute);
 
-app.listen(5001, () => console.log("Server connected"));
+const PORT = process.env.PORT || 5001;
+app.listen(PORT, () => console.log(`Server connected on port ${PORT}`));
+
