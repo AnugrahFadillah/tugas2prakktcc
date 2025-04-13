@@ -7,4 +7,4 @@ app.use(cors());
 app.use(express.json());
 app.use(notesRouter);
 
-app.listen(8080, () => console.log("Server Berjalan"));
+app.listen(5000, () => console.log("Server Berjalan"));
