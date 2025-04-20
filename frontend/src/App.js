@@ -79,7 +79,7 @@ const NotesApp = () => {
   return (
     <div style={{ background: "linear-gradient(to bottom, #87CEEB, #ffffff)", minHeight: "100vh", padding: "20px" }}>
       <div className="container p-5" style={{ maxWidth: "600px", margin: "auto", borderRadius: "10px", padding: "20px", background: "white", boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)" }}>
-        <h1 className="title has-text-centered has-text-info">Sky Notes</h1>
+        <h1 className="title has-text-centered has-text-info">Notes</h1>
         {message && <div className="notification is-success has-text-centered">{message}</div>}
         {error && <div className="notification is-danger has-text-centered">{error}</div>}
         <div className="buttons is-centered">
