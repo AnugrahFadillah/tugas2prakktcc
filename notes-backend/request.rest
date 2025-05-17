@@ -25,3 +25,68 @@ Content-Type: application/json
 
 ### delete
 DELETE http://localhost:5001/notes/1
+
+
+### 🔐 Variabel token (ganti setelah login)
+@token = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+
+### ====================================
+### 👥 USER ROUTES
+### ====================================
+
+### 👥 Get All Users
+GET http://localhost:5001/users
+Content-Type: application/json
+
+###
+
+### 👤 Get User by ID
+GET http://localhost:5001/users/1
+Content-Type: application/json
+
+###
+
+### ➕ Create User (Register)
+POST http://localhost:5001/create-users
+Content-Type: application/json
+
+{
+  "username": "akappp",
+  "email": "akap@example.com",
+  "password": "123"
+}
+
+###
+
+### ✏️ Update User
+PUT http://localhost:5001/update-users/1
+Content-Type: application/json
+
+{
+  "username": "akap_playhouse",
+  "email": "xixixi@example.com",
+  "password": "12345"
+}
+
+###
+
+### ❌ Delete User
+DELETE http://localhost:5001/delete-users/1
+Content-Type: application/json
+
+###
+
+### 🔑 Login User
+POST http://localhost:5001/login
+Content-Type: application/json
+
+{
+  "username": "akap",
+  "password": "123"
+}
+
+###
+
+### 🚪 Logout User (pakai verifyToken)
+POST http://localhost:5001/logout
+Authorization: {{token}}
