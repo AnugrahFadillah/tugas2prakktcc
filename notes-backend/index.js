@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5001;
 
 // ✅ Konfigurasi CORS
 const allowedOrigins = [
-  "https://notes-backend-akap-651881126563.us-central1.run.app"
+  "https://f-01-450707.uc.r.appspot.com/"
 ];
 
 app.use(
