@@ -14,10 +14,10 @@ RUN npm install
 COPY . .
 
 # Cloud Run menggunakan port 8080 secara default, jadi harus expose port 8080
-EXPOSE 8080
+EXPOSE 5000
 
 # Set environment variable PORT ke 8080
-ENV PORT 8080
+ENV PORT 5000
 
 # Jalankan aplikasi
 CMD ["node", "index.js"]
