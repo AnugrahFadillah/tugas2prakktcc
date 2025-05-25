@@ -5,7 +5,7 @@ import axios from "axios";
 import NoteList from "./components/NoteList";
 import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
-import NotesApp from "./pages/NotesApp"; // ✅ Import NotesApp
+import NotesApp from "./pages/NotesApp";
 import { BASE_URL } from "./utils";
 
 function App() {
